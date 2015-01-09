@@ -262,6 +262,7 @@ angular.module( 'multi-select', ['ng'] ).directive( 'multiSelect' , [ '$sce', '$
 
                 e.preventDefault();
                 e.stopPropagation();
+                e.stopImmediatePropagation();
 
                 // if it's globaly disabled, then don't do anything
                 if ( typeof attrs.disableProperty !== 'undefined' && item[ $scope.disableProperty ] === true ) {                                        
